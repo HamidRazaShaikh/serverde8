@@ -1,12 +1,12 @@
 var express = require ('express');
-var Applicant = express.router();
+var applicant = express.Router();
 var Schema = require('./schema');
 var ApplicantInfo = Schema.ApplicantInfo;
 
 
-Applicant.post('/add' ,function (req,res) {
-    var info = new ApplicantInfo (req.body);
-    info.save( function (error,data) {
+applicant.post('/add' ,function (req,res) {
+    var applicant = new ApplicantInfo (req.body);
+    applicant.save( function (error,data) {
         res.send({error : error , data : data})
         console.log(data);
         console.log(error);
@@ -14,7 +14,7 @@ Applicant.post('/add' ,function (req,res) {
 
 });
 
-Applicant.get('/get',function (req,res) {
+applicant.get('/get',function (req,res) {
     ApplicantInfo.find().exec(function (error,data) {
         res.send ({error : error , data : data});
         console.log(data);

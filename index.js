@@ -5,7 +5,7 @@ var applicant = require ('./routes/applicant');
 var mongoose =  require ('mongoose');
 var app =  express();
 
-var uri = "mongodb+srv://asdf:asdf@cluster0-v4e3c.mongodb.net/test?retryWrites=true&w=majority";
+var uri = "mongodb+srv://asdf:asdf@cluster0-v4e3c.mongodb.net/applicant?retryWrites=true&w=majority";
 mongoose.connect(uri , {useNewUrlParser: true});
 
 

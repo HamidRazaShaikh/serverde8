@@ -1,13 +1,13 @@
 var mongoose =  require ('mongoose');
 
-var  ApplicantSchema = new mongoose.schema ({
+var  ApplicantSchema = new mongoose.Schema ({
 
-    name : {type : string , required : true},
-    father : {type : string , required : true},
-    education : {type : string , required : true},
-    email : {type : string , required : true},
-    cell : {type : number , required : true},
+    name : {type : String , required : true},
+    father : {type : String , required : true},
+    education : {type : String , required : true},
+    email : {type : String , required : true},
+    cell : {type : Number, required : true},
 
 });
 
-exports.ApplicantInfo = mongoose.model ('applicant info' ,ApplicantSchema);
+exports.ApplicantInfo = mongoose.model ('applicant' ,ApplicantSchema);
